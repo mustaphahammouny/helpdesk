@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Auth;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-final class HomeController extends AbstractController
+final class LoginController extends AbstractController
 {
-    #[Route('/', name: 'home.index')]
+    #[Route('/login', name: 'login.index')]
     public function index(): Response
     {
-        return $this->render('views/home/index.html.twig');
+        return $this->render('views/auth/login.html.twig');
     }
 }
